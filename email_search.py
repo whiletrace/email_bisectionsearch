@@ -2,22 +2,29 @@ import string
 import random 
 
 # email generator
-def email_constructor(num_of_items,length):
-    string = ''
-    email_list = []
+def email_constructor(length):
+   # value of random character within assi letters
+   label1 = ''
+   for x in range(length):
+      label1 +=  string.ascii_letters[random.randrange(0, len(string.ascii_letters))]
+   return label1
+
+print(email_constructor(8))
+
+
     # email format has two parts the address and domain name
     # construct string for address 
     # construct string for domain 
-    # domain label1
-    # domain label2
-    # TLD
+     # domain label1
+     # domain label2
+     # TLD
+   
     # concatinate domain label1, domain label2, Tld 
     # concatintate address and domain name
     # append email address to email list 
     # return email list 
    
-    # value of random character within assi letters
-    char = string.assci_letters[random.randrange(0, len(string.assci_letters))]
+   
     # construct a string
 
     # characters in string constructed to follow specific pattern
@@ -25,11 +32,11 @@ def email_constructor(num_of_items,length):
     # characters in string pattern to be random 
     
     # string to be appended to list
- return email_list
+ 
 
     
 
-    pass
+   
 
 # get user input 
 # create a list
