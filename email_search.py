@@ -1,50 +1,44 @@
 import string
 import random 
-
-# email generator
+# number of emails generated based user input
+# create a email 
+# construct string for address
 def email_constructor(length):
-   # value of random character within assi letters
-   label1 = ''
-   for x in range(length):
-      label1 +=  string.ascii_letters[random.randrange(0, len(string.ascii_letters))]
-   return label1
+   addr = ''
+   char = string.ascii_letters + string.digits
+   for n in range( length):
+      addr = addr + char[random.randrange(0, len(char))]
+       
+   return addr
 
-print(email_constructor(8))
+ # print(email_constructor(8))
 
+ # construct string for domain 
+ def tld():
+   tlds = [
+    'academy', 'agency', 'ai', 'am', 'app', 'art', 'asia', 'audio', 'au', 'bar',
+    'beer', 'bio', 'biz', 'blog', 'br', 'business', 'ca', 'cafe', 'cc', 'center',
+    'chat', 'city', 'click', 'cloud', 'cn', 'co', 'com', 'company', 'cool', 'date',
+    'de', 'design', 'dev', 'digital', 'edu', 'email', 'energy', 'es', 'eu', 'events',
+    'expert', 'fan', 'film', 'finance', 'fit', 'fm', 'food', 'foundation', 'fr', 'games',
+    'gg', 'global', 'golf', 'gov', 'group', 'guru', 'health', 'help', 'host', 'hotel',
+    'house', 'in', 'info', 'io', 'it', 'jp', 'kr', 'life', 'link', 'live',
+    'media', 'me', 'mil', 'mx', 'name', 'net', 'news', 'nl', 'nu', 'online',
+    'org', 'photos', 'plus', 'pro', 'ru', 'shop', 'site', 'solutions', 'space', 'store',
+    'tech', 'to', 'tv', 'uk', 'us', 'website', 'world', 'ws', 'zone'
+   ]
+   domain = tlds[random.randrange(0,len(tlds))]
+   return domain
 
-    # email format has two parts the address and domain name
-    # construct string for address 
-    # construct string for domain 
-     # domain label1
-     # domain label2
-     # TLD
-   
-    # concatinate domain label1, domain label2, Tld 
+# concatinate domain label1, Tld 
     # concatintate address and domain name
     # append email address to email list 
     # return email list 
-   
-   
-    # construct a string
 
-    # characters in string constructed to follow specific pattern
-    # pattern to follow format of email
-    # characters in string pattern to be random 
-    
-    # string to be appended to list
- 
-
-    
-
-   
-
-# get user input 
-# create a list
-# create a email 
-# email should follow a certain format
-# number of emails generated based user input
-# emails need to be inserted into a collection list, dectionary etc
+# create a list# emails need to be inserted into a collection list, dectionary etc
 # user needs to be able to insert a specific email into the list
 # email to be placed into list @ position specified by the user
 # application to search for specified email within randomized email list
 # application to output time took to find specified email and position email was found
+
+   
