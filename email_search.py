@@ -1,5 +1,8 @@
 import string
 import random 
+from binary_search import bisection_iter
+from timer import Timer
+
 # get user input
 label = int(input("How long would you like the label of the email to be? You can choose between 1 and 63 characters. "))
 domain = int(input("how long would you like the domain to be? You can chooose between 1 and 245 characters. "))
@@ -55,10 +58,26 @@ def insert_email(user_defined):
    #print(email_list)
    email_list.insert(random.randrange(0, len(email_list)), user_defined)
    print(len(email_list))
-   print(new_list)
+   print(email_list)
    return email_list
 
-# create a list# emails need to be inserted into a collection list, dectionary etc
-# email to be placed into list @ position specified by the user
+def analyze_func(func_name, n, arr):
+    t = Timer()
+    t.start()
+    func_name(n,arr)
+    print(func_name(n, arr))
+    t.stop(func_name)
+
+# define email list 
+print("-"*40)
+l = insert_email(user_defined_email)
+l.sort()
+# execution
+analyze_func(bisection_iter, user_defined_email, l)
+
+
+print("-"*40)
+
+
 # application to search for specified email within randomized email list
 # application to output time took to find specified email and position email was found
