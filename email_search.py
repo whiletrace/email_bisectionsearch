@@ -39,7 +39,7 @@ class Email:
     # concatintate address, domain name, top level domain   
    def email(self, label, domain):
       email = f'{self.label1(label)}@{self.label1(domain)}.{self.tld()}'
-
+      # return random email string
       return email
 
 # create list of emails based upon user input
@@ -52,15 +52,15 @@ def random_email_list(length):
    # return email list 
    return email_list
 
-# user needs to be able to insert a specific email into the list
+# inserts user defined email string to list of 
 def insert_email(user_defined):
    email_list = random_email_list(num_of_emails)
-   #print(email_list)
+   # inserts user defined email at random index within email list
    email_list.insert(random.randrange(0, len(email_list)), user_defined)
-   print(len(email_list))
-   print(email_list)
+   #returns email list that includes user defined email
    return email_list
 
+# allows time alalysis 
 def analyze_func(func_name, n, arr):
     t = Timer()
     t.start()
@@ -68,16 +68,13 @@ def analyze_func(func_name, n, arr):
     print(func_name(n, arr))
     t.stop(func_name)
 
-# define email list 
+#separator
 print("-"*40)
+# define email list
 l = insert_email(user_defined_email)
+#sirt kust before search
 l.sort()
-# execution
+# execute search
 analyze_func(bisection_iter, user_defined_email, l)
-
-
+#seperator
 print("-"*40)
-
-
-# application to search for specified email within randomized email list
-# application to output time took to find specified email and position email was found
