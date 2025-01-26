@@ -68,7 +68,7 @@ def analyze_func(func_name, n, arr):
     print(func_name(n, arr))
     t.stop(func_name)
 
-#separator
+# separator
 print("-"*40)
 # define email list
 l = insert_email(user_defined_email)
@@ -76,5 +76,5 @@ l = insert_email(user_defined_email)
 l.sort()
 # execute search
 analyze_func(bisection_iter, user_defined_email, l)
-#seperator
+# seperator
 print("-"*40)
